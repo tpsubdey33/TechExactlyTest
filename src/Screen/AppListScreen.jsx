@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Text, View, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, FlatList, StyleSheet, TouchableOpacity, ActivityIndicator} from 'react-native';
 import {scale, verticalScale, moderateScale} from 'react-native-size-matters';
 import {AppHeader, AppItemView, AppSearch} from '../Components';
 import {getAppData} from '../API/ApiCall';
@@ -28,7 +28,7 @@ const AppListScreen = () => {
     try {
       const response = await getAppData();
       setApps(response);
-      setFilteredApps(response);
+      // setFilteredApps(response);
     } catch (error) {
       console.error('Error fetching apps:', error);
       setError('Failed to fetch apps. Please try again.');
@@ -56,7 +56,7 @@ const AppListScreen = () => {
       <AppSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       {isLoading ? (
         <View style={styles.centerContent}>
-          <Text>Loading...</Text>
+          <ActivityIndicator size='large' color="red" />
         </View>
       ) : error ? (
         <View style={styles.centerContent}>

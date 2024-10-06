@@ -24,7 +24,7 @@ const Header = () => {
         <Text style={styles.username}>Suvojit</Text>
         <View style={styles.connectedStatus}>
           <Text style={styles.connectedText}>Connected</Text>
-          <Ionicons name="checkmark-circle" size={scale(20)} color="#4CAF50" />
+          <Ionicons name="checkmark-circle" size={moderateScale(20)} color="#4CAF50" />
         </View>
       </View>
       <View style={styles.tabBar}>
