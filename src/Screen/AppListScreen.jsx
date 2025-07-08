@@ -1,5 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {Text, View, FlatList, StyleSheet, TouchableOpacity, ActivityIndicator} from 'react-native';
+import {
+  Text,
+  View,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity,
+  ActivityIndicator,
+} from 'react-native';
 import {scale, verticalScale, moderateScale} from 'react-native-size-matters';
 import {AppHeader, AppItemView, AppSearch} from '../Components';
 import {getAppData} from '../API/ApiCall';
@@ -17,7 +24,7 @@ const AppListScreen = () => {
 
   useEffect(() => {
     const filtered = apps.filter(app =>
-      app?.app_name.toLowerCase().includes(searchQuery.toLowerCase())
+      app?.app_name.toLowerCase().includes(searchQuery.toLowerCase()),
     );
     setFilteredApps(filtered);
   }, [searchQuery, apps]);
@@ -56,7 +63,7 @@ const AppListScreen = () => {
       <AppSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       {isLoading ? (
         <View style={styles.centerContent}>
-          <ActivityIndicator size='large' color="red" />
+          <ActivityIndicator size="large" color="red" />
         </View>
       ) : error ? (
         <View style={styles.centerContent}>

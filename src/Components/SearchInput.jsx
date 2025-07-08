@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, TextInput, TouchableOpacity } from 'react-native';
+import {View, TextInput, TouchableOpacity} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { scale,verticalScale,moderateScale } from 'react-native-size-matters';
-import { StyleSheet } from 'react-native';
+import {scale, verticalScale, moderateScale} from 'react-native-size-matters';
+import {StyleSheet} from 'react-native';
 
-const SearchInput = ({ searchQuery, setSearchQuery }) => {
+const SearchInput = ({searchQuery, setSearchQuery}) => {
   return (
     <View style={styles.searchContainer}>
       <TextInput
@@ -22,7 +22,7 @@ const SearchInput = ({ searchQuery, setSearchQuery }) => {
 
 const styles = StyleSheet.create({
   searchContainer: {
-    width: "90%",
+    width: '90%',
     flexDirection: 'row',
     alignItems: 'center',
     alignSelf: 'center',

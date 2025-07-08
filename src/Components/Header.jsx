@@ -1,8 +1,15 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {scale,moderateScale,verticalScale} from 'react-native-size-matters';
+import {scale, moderateScale, verticalScale} from 'react-native-size-matters';
 
 const Header = () => {
   return (
@@ -24,7 +31,11 @@ const Header = () => {
         <Text style={styles.username}>Suvojit</Text>
         <View style={styles.connectedStatus}>
           <Text style={styles.connectedText}>Connected</Text>
-          <Ionicons name="checkmark-circle" size={moderateScale(20)} color="#4CAF50" />
+          <Ionicons
+            name="checkmark-circle"
+            size={moderateScale(20)}
+            color="#4CAF50"
+          />
         </View>
       </View>
       <View style={styles.tabBar}>
@@ -52,7 +63,7 @@ const styles = StyleSheet.create({
     width: scale(80),
     height: verticalScale(80),
     borderRadius: moderateScale(40),
-    resizeMode:"contain",
+    resizeMode: 'contain',
   },
   username: {
     color: '#fff',
